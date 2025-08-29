@@ -1,16 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://f1204vprh6om"]
+[gd_scene load_steps=3 format=3 uid="uid://f1204vprh6om"]
 
 [ext_resource type="AudioStream" uid="uid://b80bvhgs0ao7t" path="res://assets/audio/Ambiance_base.wav" id="1_wjwox"]
+[ext_resource type="AudioStream" uid="uid://bb7685lc6oi74" path="res://assets/audio/water-dripping-sfx-166359.wav" id="2_lmi0q"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 4.0
-offset_right = 3.0
-offset_bottom = 4.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -25,8 +24,27 @@ offset_left = -44.032
 offset_top = -44.264
 offset_right = 42.968
 offset_bottom = 44.736
-text = "🔊"
+text = "X 
+Toogle"
 icon_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
 stream = ExtResource("1_wjwox")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.918
+anchor_top = 0.093
+anchor_right = 0.918
+anchor_bottom = 0.093
+offset_left = -43.536
+offset_top = -44.264
+offset_right = 43.464
+offset_bottom = 44.736
+text = "Y
+Trigger"
+icon_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button2"]
+stream = ExtResource("2_lmi0q")
