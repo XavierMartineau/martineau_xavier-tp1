@@ -1,18 +1,83 @@
-[gd_scene load_steps=5 format=3 uid="uid://f1204vprh6om"]
+[gd_scene load_steps=15 format=3 uid="uid://f1204vprh6om"]
 
 [ext_resource type="Script" uid="uid://cmux42xr5maob" path="res://button.gd" id="1_0wjsg"]
 [ext_resource type="AudioStream" uid="uid://b80bvhgs0ao7t" path="res://assets/audio/Ambiance_base.wav" id="1_wjwox"]
 [ext_resource type="AudioStream" uid="uid://bb7685lc6oi74" path="res://assets/audio/water-dripping-sfx-166359.wav" id="2_lmi0q"]
+[ext_resource type="Texture2D" uid="uid://b8h3yvfhobfjm" path="res://assets/image/2d_animation_frog_spritesheet.webp" id="3_6j08e"]
 [ext_resource type="Script" uid="uid://cot3ebgh3sywa" path="res://button_trigger.gd" id="3_fkdgp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx6wt"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naksp"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c36iw"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdfle"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcmrl"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2qn2"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywusb"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkvlu"]
+atlas = ExtResource("3_6j08e")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywd8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx6wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naksp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c36iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdfle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcmrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2qn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywusb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkvlu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
+offset_left = 3.0
 offset_top = 2.0
-offset_right = 1.0
+offset_right = 3.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -38,19 +103,10 @@ script = ExtResource("1_0wjsg")
 stream = ExtResource("1_wjwox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogle"]
-
-[node name="ColorRect" type="ColorRect" parent="Button_toogle"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.446
-anchor_top = 1.945
-anchor_right = 0.446
-anchor_bottom = 1.945
-offset_left = -102.524
-offset_top = -93.97
-offset_right = 102.476
-offset_bottom = 94.03
-color = Color(0.462745, 1, 1, 1)
+position = Vector2(95, 247)
+scale = Vector2(1.95313, 2.48438)
+sprite_frames = SubResource("SpriteFrames_ywd8r")
+frame_progress = 0.405957
 
 [node name="Button_trigger" type="Button" parent="."]
 layout_mode = 1
@@ -70,6 +126,31 @@ script = ExtResource("3_fkdgp")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_trigger"]
 stream = ExtResource("2_lmi0q")
+
+[node name="ColorRect" type="ColorRect" parent="Button_trigger"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.474
+anchor_top = 1.701
+anchor_right = 0.474
+anchor_bottom = 1.701
+offset_left = -95.91
+offset_top = -65.057
+offset_right = 96.09
+offset_bottom = 64.943
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.395
+anchor_top = 0.134
+anchor_right = 0.395
+anchor_bottom = 0.134
+offset_left = -33.04
+offset_top = -52.832
+offset_right = 21.96
+offset_bottom = 34.168
+expand_icon = true
 
 [connection signal="toggled" from="Button_toogle" to="Button_toogle" method="_on_toggled"]
 [connection signal="pressed" from="Button_trigger" to="Button_trigger" method="_on_pressed"]
