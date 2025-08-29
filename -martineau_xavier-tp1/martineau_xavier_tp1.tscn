@@ -1,10 +1,76 @@
-[gd_scene load_steps=15 format=3 uid="uid://f1204vprh6om"]
+[gd_scene load_steps=26 format=3 uid="uid://f1204vprh6om"]
 
 [ext_resource type="Script" uid="uid://cmux42xr5maob" path="res://button.gd" id="1_0wjsg"]
 [ext_resource type="AudioStream" uid="uid://b80bvhgs0ao7t" path="res://assets/audio/Ambiance_base.wav" id="1_wjwox"]
 [ext_resource type="AudioStream" uid="uid://bb7685lc6oi74" path="res://assets/audio/water-dripping-sfx-166359.wav" id="2_lmi0q"]
 [ext_resource type="Texture2D" uid="uid://b8h3yvfhobfjm" path="res://assets/image/2d_animation_frog_spritesheet.webp" id="3_6j08e"]
 [ext_resource type="Script" uid="uid://cot3ebgh3sywa" path="res://button_trigger.gd" id="3_fkdgp"]
+[ext_resource type="Script" uid="uid://bpxeayuvsb053" path="res://check_button.gd" id="6_51yo1"]
+[ext_resource type="Texture2D" uid="uid://csf5ipvg1b5nh" path="res://assets/image/8-bits-characters-gaming-assets.jpg" id="7_gx6wt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywd8r"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(0, 0, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdcaj"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(1344, 0, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tagn5"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(2688, 0, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awanh"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(4032, 0, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y6n7"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(0, 1792, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ixs2"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(1344, 1792, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dm6y"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(2688, 1792, 1344, 1792)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pftu5"]
+atlas = ExtResource("7_gx6wt")
+region = Rect2(4032, 1792, 1344, 1792)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kei6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywd8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdcaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tagn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awanh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y6n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ixs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dm6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pftu5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gx6wt"]
 atlas = ExtResource("3_6j08e")
@@ -75,12 +141,33 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 2.0
-offset_right = 3.0
-offset_bottom = 2.0
+offset_left = -1.0
+offset_top = -7.0
+offset_right = -1.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.534
+anchor_top = 0.15
+anchor_right = 0.534
+anchor_bottom = 0.15
+offset_left = -67.168
+offset_top = -33.2
+offset_right = -23.168
+offset_bottom = -9.2
+scale = Vector2(3, 3)
+expand_icon = true
+script = ExtResource("6_51yo1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CheckButton"]
+position = Vector2(18.6667, 66.6667)
+scale = Vector2(0.0441468, 0.0447521)
+sprite_frames = SubResource("SpriteFrames_kei6r")
+frame_progress = 0.00285637
 
 [node name="Button_toogle" type="Button" parent="."]
 layout_mode = 1
@@ -139,18 +226,6 @@ offset_top = -65.057
 offset_right = 96.09
 offset_bottom = 64.943
 
-[node name="CheckButton" type="CheckButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.395
-anchor_top = 0.134
-anchor_right = 0.395
-anchor_bottom = 0.134
-offset_left = -33.04
-offset_top = -52.832
-offset_right = 21.96
-offset_bottom = 34.168
-expand_icon = true
-
+[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
 [connection signal="toggled" from="Button_toogle" to="Button_toogle" method="_on_toggled"]
 [connection signal="pressed" from="Button_trigger" to="Button_trigger" method="_on_pressed"]
