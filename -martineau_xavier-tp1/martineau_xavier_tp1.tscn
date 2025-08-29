@@ -167,7 +167,7 @@ script = ExtResource("6_51yo1")
 position = Vector2(18.6667, 66.6667)
 scale = Vector2(0.0441468, 0.0447521)
 sprite_frames = SubResource("SpriteFrames_kei6r")
-frame_progress = 0.00285637
+frame_progress = 0.0182952
 
 [node name="Button_toogle" type="Button" parent="."]
 layout_mode = 1
