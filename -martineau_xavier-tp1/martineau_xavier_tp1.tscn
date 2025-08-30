@@ -186,7 +186,7 @@ Toogle"
 icon_alignment = 1
 script = ExtResource("1_0wjsg")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_toogle"]
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Button_toogle"]
 stream = ExtResource("1_wjwox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogle"]
@@ -211,8 +211,9 @@ Trigger"
 icon_alignment = 1
 script = ExtResource("3_fkdgp")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_trigger"]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Button_trigger"]
 stream = ExtResource("2_lmi0q")
+volume_db = 15.786
 
 [node name="ColorRect" type="ColorRect" parent="Button_trigger"]
 layout_mode = 1
@@ -225,6 +226,15 @@ offset_left = -95.91
 offset_top = -65.057
 offset_right = 96.09
 offset_bottom = 64.943
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = -333.0
+offset_right = 712.0
+offset_bottom = -91.0
+text = "ERREUR: 2 SON JOUENT AU DEMARAGE
+SOLUC: TROUVER CODE DU PROF ET REGARDER COMMENT"
 
 [connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
 [connection signal="toggled" from="Button_toogle" to="Button_toogle" method="_on_toggled"]
