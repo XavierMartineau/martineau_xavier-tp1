@@ -168,13 +168,9 @@ animations = [{
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchor_right = 10.0
-anchor_bottom = 12.735
-offset_right = -10368.0
-offset_bottom = -7604.28
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.988875, 0.999005)
+scale = Vector2(0.284502, 0.129056)
 
 [node name="Button_toogle_X" type="Button" parent="."]
 layout_mode = 1
@@ -183,10 +179,11 @@ anchor_left = 0.096
 anchor_top = 0.12
 anchor_right = 0.096
 anchor_bottom = 0.12
-offset_left = -110.692
-offset_top = -75.3258
-offset_right = 83.308
-offset_bottom = 70.6742
+offset_left = 70.2981
+offset_top = 69.7373
+offset_right = 264.298
+offset_bottom = 215.737
+scale = Vector2(3.59459, 7.09091)
 toggle_mode = true
 text = "X 
 Toogle"
@@ -197,24 +194,21 @@ script = ExtResource("1_naksp")
 stream = ExtResource("4_51yo1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogle_X"]
-position = Vector2(95, 247)
+position = Vector2(96.8053, 278.651)
+scale = Vector2(3.00076, 5.51063)
 sprite_frames = SubResource("SpriteFrames_ywd8r")
 frame_progress = 0.405957
 
 [node name="Button_trigger" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.862
-anchor_top = 0.146
-anchor_right = 0.862
-anchor_bottom = 0.146
-offset_left = -107.024
-offset_top = -78.608
-offset_right = 107.976
-offset_bottom = 78.392
-text = "Y
-Trigger"
-icon_alignment = 1
+offset_left = 1528.99
+offset_top = 85.2345
+offset_right = 1789.99
+offset_bottom = 378.234
+scale = Vector2(3.851, 4.14211)
+text = "Y 
+trigger"
 script = ExtResource("3_fkdgp")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Button_trigger"]
@@ -224,26 +218,27 @@ volume_db = 6.276
 [node name="ColorRect" type="ColorRect" parent="Button_trigger"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.474
-anchor_top = 1.701
-anchor_right = 0.474
-anchor_bottom = 1.701
-offset_left = -95.91
-offset_top = -65.057
-offset_right = 96.09
-offset_bottom = 64.943
+anchor_left = 0.352
+anchor_top = 2.934
+anchor_right = 0.5
+anchor_bottom = 3.057
+offset_left = -108.301
+offset_top = -502.361
+offset_right = 170.071
+offset_bottom = 164.6
 
 [node name="Button_toogleZ" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.136
-anchor_right = 0.5
-anchor_bottom = 0.136
-offset_left = -98.7
-offset_top = -72.7723
-offset_right = 95.3
-offset_bottom = 73.2277
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3135.3
+offset_top = 116.229
+offset_right = 3294.3
+offset_bottom = 219.229
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.04128, 5.34178)
 toggle_mode = true
 text = "Z
 Toogle"
@@ -257,7 +252,7 @@ pitch_scale = 0.98
 playback_type = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogleZ"]
-position = Vector2(105.2, 349.318)
+position = Vector2(97.0815, 324.926)
 scale = Vector2(10, 11.1465)
 sprite_frames = SubResource("SpriteFrames_kei6r")
 frame = 2
