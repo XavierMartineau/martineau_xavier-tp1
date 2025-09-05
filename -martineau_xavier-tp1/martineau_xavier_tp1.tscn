@@ -1,76 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://f1204vprh6om"]
+[gd_scene load_steps=31 format=3 uid="uid://f1204vprh6om"]
 
-[ext_resource type="Script" uid="uid://cmux42xr5maob" path="res://button.gd" id="1_0wjsg"]
-[ext_resource type="AudioStream" uid="uid://b80bvhgs0ao7t" path="res://assets/audio/Ambiance_base.wav" id="1_wjwox"]
-[ext_resource type="AudioStream" uid="uid://bb7685lc6oi74" path="res://assets/audio/water-dripping-sfx-166359.wav" id="2_lmi0q"]
+[ext_resource type="Script" uid="uid://dxnofbslw7nk" path="res://button_toogle_z.gd" id="1_gx6wt"]
+[ext_resource type="Script" uid="uid://cfvwc5idjhcdl" path="res://button_toogle_x.gd" id="1_naksp"]
 [ext_resource type="Texture2D" uid="uid://b8h3yvfhobfjm" path="res://assets/image/2d_animation_frog_spritesheet.webp" id="3_6j08e"]
 [ext_resource type="Script" uid="uid://cot3ebgh3sywa" path="res://button_trigger.gd" id="3_fkdgp"]
-[ext_resource type="Script" uid="uid://bpxeayuvsb053" path="res://check_button.gd" id="6_51yo1"]
-[ext_resource type="Texture2D" uid="uid://csf5ipvg1b5nh" path="res://assets/image/8-bits-characters-gaming-assets.jpg" id="7_gx6wt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywd8r"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(0, 0, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdcaj"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(1344, 0, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tagn5"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(2688, 0, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_awanh"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(4032, 0, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4y6n7"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(0, 1792, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ixs2"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(1344, 1792, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6dm6y"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(2688, 1792, 1344, 1792)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pftu5"]
-atlas = ExtResource("7_gx6wt")
-region = Rect2(4032, 1792, 1344, 1792)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kei6r"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ywd8r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kdcaj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tagn5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_awanh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4y6n7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6ixs2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6dm6y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pftu5")
-}],
-"loop": true,
-"name": &"default",
-"speed": 7.0
-}]
+[ext_resource type="AudioStream" uid="uid://dyy8hlyis8x2m" path="res://assets/audio/frogs-croaking-ambience-329850.mp3" id="4_51yo1"]
+[ext_resource type="AudioStream" uid="uid://d3j7kosefa4r7" path="res://assets/audio/danger-situation-sound-effect-15635.mp3" id="4_gx6wt"]
+[ext_resource type="Texture2D" uid="uid://bonlh3ahailqb" path="res://assets/image/reaper_1.png" id="6_gx6wt"]
+[ext_resource type="AudioStream" uid="uid://c0vg2lax5t2ks" path="res://assets/audio/c-major-122-bass-loop-316061.mp3" id="7_51yo1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gx6wt"]
 atlas = ExtResource("3_6j08e")
@@ -136,62 +73,131 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywd8r"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(0, 0, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdcaj"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(26, 0, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tagn5"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(52, 0, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awanh"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(0, 36, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y6n7"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(26, 36, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ixs2"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(52, 36, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dm6y"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(0, 72, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pftu5"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(26, 72, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kei6r"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(52, 72, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp0ow"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(0, 108, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0sg"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(26, 108, 26, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pthnh"]
+atlas = ExtResource("6_gx6wt")
+region = Rect2(52, 108, 26, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kei6r"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywd8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdcaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tagn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awanh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y6n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ixs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dm6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pftu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kei6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp0ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk0sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pthnh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -7.0
-offset_right = -1.0
-offset_bottom = -7.0
+anchor_right = 10.0
+anchor_bottom = 12.735
+offset_right = -10368.0
+offset_bottom = -7604.28
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.988875, 0.999005)
 
-[node name="CheckButton" type="CheckButton" parent="."]
+[node name="Button_toogle_X" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.534
-anchor_top = 0.15
-anchor_right = 0.534
-anchor_bottom = 0.15
-offset_left = -67.168
-offset_top = -33.2
-offset_right = -23.168
-offset_bottom = -9.2
-scale = Vector2(3, 3)
-expand_icon = true
-script = ExtResource("6_51yo1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CheckButton"]
-position = Vector2(18.6667, 66.6667)
-scale = Vector2(0.0441468, 0.0447521)
-sprite_frames = SubResource("SpriteFrames_kei6r")
-frame_progress = 0.0182952
-
-[node name="Button_toogle" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.112
-anchor_top = 0.137
-anchor_right = 0.112
-anchor_bottom = 0.137
-offset_left = -97.024
-offset_top = -72.776
-offset_right = 96.976
-offset_bottom = 73.224
+anchor_left = 0.096
+anchor_top = 0.12
+anchor_right = 0.096
+anchor_bottom = 0.12
+offset_left = -110.692
+offset_top = -75.3258
+offset_right = 83.308
+offset_bottom = 70.6742
 toggle_mode = true
 text = "X 
 Toogle"
 icon_alignment = 1
-script = ExtResource("1_0wjsg")
+script = ExtResource("1_naksp")
 
-[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Button_toogle"]
-stream = ExtResource("1_wjwox")
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Button_toogle_X"]
+stream = ExtResource("4_51yo1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogle"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogle_X"]
 position = Vector2(95, 247)
-scale = Vector2(1.95313, 2.48438)
 sprite_frames = SubResource("SpriteFrames_ywd8r")
 frame_progress = 0.405957
 
@@ -212,8 +218,8 @@ icon_alignment = 1
 script = ExtResource("3_fkdgp")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Button_trigger"]
-stream = ExtResource("2_lmi0q")
-volume_db = 15.786
+stream = ExtResource("7_51yo1")
+volume_db = 6.276
 
 [node name="ColorRect" type="ColorRect" parent="Button_trigger"]
 layout_mode = 1
@@ -227,15 +233,36 @@ offset_top = -65.057
 offset_right = 96.09
 offset_bottom = 64.943
 
-[node name="TextEdit" type="TextEdit" parent="."]
-layout_mode = 0
-offset_left = 197.0
-offset_top = -333.0
-offset_right = 712.0
-offset_bottom = -91.0
-text = "ERREUR: 2 SON JOUENT AU DEMARAGE
-SOLUC: TROUVER CODE DU PROF ET REGARDER COMMENT"
+[node name="Button_toogleZ" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.136
+anchor_right = 0.5
+anchor_bottom = 0.136
+offset_left = -98.7
+offset_top = -72.7723
+offset_right = 95.3
+offset_bottom = 73.2277
+toggle_mode = true
+text = "Z
+Toogle"
+icon_alignment = 1
+script = ExtResource("1_gx6wt")
 
-[connection signal="toggled" from="CheckButton" to="CheckButton" method="_on_toggled"]
-[connection signal="toggled" from="Button_toogle" to="Button_toogle" method="_on_toggled"]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Button_toogleZ"]
+stream = ExtResource("4_gx6wt")
+volume_db = 2.786
+pitch_scale = 0.98
+playback_type = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_toogleZ"]
+position = Vector2(105.2, 349.318)
+scale = Vector2(10, 11.1465)
+sprite_frames = SubResource("SpriteFrames_kei6r")
+frame = 2
+frame_progress = 0.780297
+
+[connection signal="toggled" from="Button_toogle_X" to="Button_toogle_X" method="_on_toggled"]
 [connection signal="pressed" from="Button_trigger" to="Button_trigger" method="_on_pressed"]
+[connection signal="toggled" from="Button_toogleZ" to="Button_toogleZ" method="_on_toggled"]
